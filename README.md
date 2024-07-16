@@ -62,11 +62,11 @@ A brief description of key functions:
 
 Here are potential improvements to consider for scaling or refining the application:
 
-    1. **Struct Implementation**: Use structs for organized data management of movies and users.
-    2. **Function Separation**: Modularize the code into separate functions for each major feature for better maintainability.
-    3. **Error Handling**: Improve file operation robustness by handling potential read/write errors more effectively.
-    4. **Global Variables**: Minimize the use of global variables to avoid potential conflicts and enhance code reliability.
-    5. **Code Readability**: This code is all in one file. I find that this is very ugly and is the major downside. If this was a large application, to improve it, scalability of the file would be needed. This means that having multiple files and modules for each responsible function and having header files would greatly help.
+    1. Struct Implementation: Use structs for organized data management of movies and users.
+    2. Function Separation: Modularize the code into separate functions for each major feature for better maintainability.
+    3. Error Handling: Improve file operation robustness by handling potential read/write errors more effectively.
+    4. Global Variables: Minimize the use of global variables to avoid potential conflicts and enhance code reliability.
+    5. Code Readability: This code is all in one file. I find that this is very ugly and is the major downside. If this was a large application, to improve it, scalability of the file would be needed. This means that having multiple files and modules for each responsible function and having header files would greatly help.
 
 This guide is also part of me learning to improve my C programming.
 A lot of the aspects like code readability and organization I am not too happy about and could use major major major improvements.
@@ -77,14 +77,14 @@ Now what can those major improvements be if we wanted to scale to a large applci
 
 As we envision this system handling thousands of concurrent users and a significant database of movies and ratings, there are key architectural and technological shifts required to ensure scalability, reliability, and maintainability:
 
-    1. **Database Integration**: Transition from using text files to a robust database system like PostgreSQL or MongoDB. This would allow for efficient data management, and scalabiilty. Implementing a database would obviously also facilitate better data integrity then simple text files lol.
-    2. **Microservices Architecture**: Decompose the application into microservices to improve scalability and maintainability. This allows each part of the system (ex: user registration, movie displaying, rating processing, recommendation generation) to scale independently.
-    3. **User Authentication and Security**: Implement secure authentication mechanisms like OAuth or JWT for user management. This ensures that user data and actions are secured, especially in an environment where personal and sensitive data are handled.
-    4. **API Development**: Develop a RESTful API to handle requests between the client-side and server-side. This would allow for a more modular frontend that can be developed independently of the backend and can be scaled easily.
-    5. **Caching Mechanisms**: Integrate caching strategies using tools like Redis to store frequently accessed data such as movie lists and top recommendations. This reduces the load on the database and speeds up response times for end users.
-    6. **Performance Monitoring and Logging**: Incorporate comprehensive monitoring and logging systems to track the performance of the application and to quickly identify and troubleshoot issues. Tools like Prometheus for monitoring and ELK Stack for logging can be utilized.
-    7. **Continuous Integration and Deployment (CI/CD)**: Implement CI/CD pipelines to automate testing and deployment processes. This ensures that new code changes can be rapidly and safely deployed to production without downtime.
-    8. **User Interface and Experience**: Design a responsive and intuitive user interface that can handle various devices and screen sizes. Employing frameworks like React or Vue.js for the frontend can enhance the user experience with dynamic updates and interactive elements.
+    1. Database Integration: Transition from using text files to a robust database system like PostgreSQL or MongoDB. This would allow for efficient data management, and scalabiilty. Implementing a database would obviously also facilitate better data integrity then simple text files lol.
+    2. Microservices Architecture: Decompose the application into microservices to improve scalability and maintainability. This allows each part of the system (ex: user registration, movie displaying, rating processing, recommendation generation) to scale independently.
+    3. User Authentication and Security: Implement secure authentication mechanisms like OAuth or JWT for user management. This ensures that user data and actions are secured, especially in an environment where personal and sensitive data are handled.
+    4. API Development: Develop a RESTful API to handle requests between the client-side and server-side. This would allow for a more modular frontend that can be developed independently of the backend and can be scaled easily.
+    5. Caching Mechanisms: Integrate caching strategies using tools like Redis to store frequently accessed data such as movie lists and top recommendations. This reduces the load on the database and speeds up response times for end users.
+    6. Performance Monitoring and Logging: Incorporate comprehensive monitoring and logging systems to track the performance of the application and to quickly identify and troubleshoot issues. Tools like Prometheus for monitoring and ELK Stack for logging can be utilized.
+    7. Continuous Integration and Deployment (CI/CD): Implement CI/CD pipelines to automate testing and deployment processes. This ensures that new code changes can be rapidly and safely deployed to production without downtime.
+    8. User Interface and Experience: Design a responsive and intuitive user interface that can handle various devices and screen sizes. Employing frameworks like React or Vue.js for the frontend can enhance the user experience with dynamic updates and interactive elements.
 
 By actually taking the time to look at those areas this small idea could be turned into a big scalable robust online application/platform.
 Again, this is why I like to simplify my code and reflect on it so I can learn even more.
